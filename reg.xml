@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--<site>-->
+
+    <!--<senario>-->
+
+        <page name="Home Page" url="http://demo.guru99.com/">
+        <!--<text value = "Guru99 Bank"/>-->
+        <form name="frmLogin">
+            <param name = "emailid" value = "hello@example.com"/>
+
+        </form>
+        </page>
+
+    <!--</senario>-->
+
+<!--</site>-->
