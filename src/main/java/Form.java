@@ -6,7 +6,7 @@ import java.util.ArrayList;
  */
 @XmlRootElement(name = "form")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Form
+public class Form extends Item
 {
 
     @XmlAttribute(name ="name")

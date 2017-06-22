@@ -1,4 +1,5 @@
 import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
 
 /**
  * Created by rzzayed on 6/21/17.
@@ -7,6 +8,9 @@ import javax.xml.bind.annotation.*;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Page
 {
+    @XmlElementRef
+    private ArrayList<Item> items = new ArrayList<Item>();
+
     @XmlAttribute(name = "url")
     private String URL;
 
@@ -14,8 +18,6 @@ public class Page
     @XmlAttribute(name="page_name")
     private String name;
 
-    @XmlElement(name = "form")
-    private Form form;
 
     public String getURL() {
         return URL;
@@ -33,12 +35,9 @@ public class Page
         this.name = name;
     }
 
-    public Form getForm() {
-        return form;
-    }
 
-    public void setForm(Form form) {
-        this.form = form;
+    public ArrayList<Item> getItems() {
+        return items;
     }
 
     @Override
@@ -46,7 +45,6 @@ public class Page
         return "Page{" +
                 "URL='" + URL + '\'' +
                 ", name='" + name + '\'' +
-                ", form=" + form +
                 '}';
     }
 }

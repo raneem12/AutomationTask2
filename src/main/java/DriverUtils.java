@@ -49,6 +49,9 @@ public class DriverUtils {
             element = getBy(driver, By.xpath("//input[@alt='" + identifier + "']"));
         }
         if (element == null) {
+            element = getBy(driver, By.xpath(identifier));
+        }
+        if (element == null) {
             element = getBy(driver, By.xpath("//input[@value='" + identifier + "']"));
         }
         if (element == null) {

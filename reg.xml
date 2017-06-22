@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--<site>-->
 
-    <!--<senario>-->
+<senario>
 
-        <page name="Home Page" url="http://demo.guru99.com/">
-        <!--<text value = "Guru99 Bank"/>-->
+    <page name="Home Page" url="http://demo.guru99.com/">
+        <validate-text value = "Guru99 Bank"/>
         <form name="frmLogin">
-            <param name = "emailid" value = "hello@example.com"/>
-
+            <param name="emailid" value="hello@example.com"/>
         </form>
-        </page>
+        <notvalidate-text value = "Email ID must not be blank"/>
+        <notvalidate-text value = "Email ID is not valid"/>
+    </page>
 
-    <!--</senario>-->
+    <page>
+        <validate-text value="Access details to demo site"/>
+        <validate-text value="This access is valid only for 20 days."/>
+        <getText id = "//table/tbody/tr[4]/td[2]" key="userId"/>
 
-<!--</site>-->
+        <getText id = "//table/tbody/tr[5]/td[2]"  key="password"/>
+    </page>
+    <page url="http://demo.guru99.com/V4/index.php">
+
+
+
+    </page>
+
+
+
+</senario>
+
+        <!--</site>-->
